@@ -1,0 +1,7 @@
+Security and Building Access
+
+The front door passcode is 4488 and is changed quarterly.
+The office safe code is 9988. Only the finance team and the office manager know this code.
+Reception is on the 1st floor, internal phone extension 100.
+The data center room on floor 0 requires badge access and is off-limits to everyone except DevOps and InfoSec.
+Guest Wi-Fi password is Guest2024; the internal network requires the corporate VPN.

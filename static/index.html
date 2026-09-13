@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LlamaIndex · Corporate Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="logo">🦙</span>
+        <h1>LlamaIndex Hello</h1>
+      </div>
+      <p class="tagline">Ask questions about the employee handbook</p>
+
+      <button id="suggest-1" class="suggestion">How many vacation days do I get?</button>
+      <button id="suggest-2" class="suggestion">What are the lunch hours?</button>
+      <button id="suggest-3" class="suggestion">How do I report a sick day?</button>
+
+      <div class="sources" id="sources">
+        <h2>Sources</h2>
+        <ul id="source-list"></ul>
+      </div>
+    </aside>
+
+    <main class="chat">
+      <div id="messages" class="messages">
+        <div class="message bot">
+          Hello! Ask me anything about our company policies.
+        </div>
+      </div>
+
+      <form id="chat-form" class="composer">
+        <input
+          id="question"
+          type="text"
+          placeholder="e.g. What is the office safe code?"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" id="send" aria-label="Send">➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

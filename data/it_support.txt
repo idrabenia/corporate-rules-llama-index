@@ -1,0 +1,6 @@
+IT Support and Equipment
+
+The IT help desk is available by extension 500, Monday to Friday 8:00 AM to 7:00 PM.
+A new laptop is provided every 3 years; a replacement earlier than that requires manager approval.
+Passwords must be at least 12 characters long and changed every 90 days.
+The internal portal is available at https://portal.acme.internal.
