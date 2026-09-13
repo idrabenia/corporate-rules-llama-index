@@ -34,16 +34,18 @@ Open http://127.0.0.1:8000 and ask questions such as:
 - "What is the office safe code?"
 - "How do I report a sick day?"
 
-## LLM / OpenAI key
+## LLM / Ollama in Docker
 
-Composing the final answer still uses a language model. By default LlamaIndex
-uses `gpt-4o-mini` and requires an API key:
+The language model used to compose answers (LLaMA) runs locally in an Ollama
+Docker container on localhost, so no API keys are needed. Start it once:
 
 ```bash
-export OPENAI_API_KEY=sk-...
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+docker exec -it ollama ollama pull llama3.2:latest   # bigger: llama3.1:8b
 ```
 
-You can use any other vendor via `Settings.llm` in `core_settings.py`
-(e.g. an Ollama or Groq LLM); embedding stays local regardless.
+Then run the app and the API will query `http://localhost:11434`. To use a
+different LLaMA model, change `OLLAMA_MODEL` in `core_settings.py` (and pull
+it with `ollama pull <name>` first).
 
 # corporate-rules-llama-index
